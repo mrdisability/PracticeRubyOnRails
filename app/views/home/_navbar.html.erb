@@ -1,21 +1,21 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <%= link_to "PracticeRubyOnRails", root_path, class: "navbar-brand" %>
-    <%# <a class="navbar-brand" href="#">PracticeRubyOnRails</a> %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <%# <li class="nav-item">
+        <li class="nav-item">
           <%= link_to "Get Prices", home_prices_path, class: "nav-link" %>
-          <%# <a class="nav-link" aria-current="page" href="/">Home</a>
-        </li>  %>
+        </li> 
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-primary" type="submit">Search</button>
-      </form>
+
+      <%= form_with url: "/home/prices", method: :get, class: 'd-flex' do |form| %>
+      <%= form.text_field :sym, placeholder: 'Enter Crypto Symbol', class: 'form-control me-2' %>
+      <%= form.submit "Lookup", class: 'btn btn-outline-primary' %>
+      <% end %>
+
     </div>
   </div>
 </nav>
