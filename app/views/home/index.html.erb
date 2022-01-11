@@ -1,0 +1,31 @@
+<h1>Fetching data from CryptoCompare api</h1>
+
+<br /><br />
+
+<%# <%= @news["Data"] %>
+
+<div class="row">
+<% for x in @news["Data"] %>
+    <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+            <img src="<%= x["imageurl"] %>" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><%= x["title"] %></h5>
+                <p class="card-text"><%= x["body"] %></p>
+                <a href="<%= x["url"] %>" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+    </div>
+<% end %>
+</div>
+
+<% if false %>
+Commenting
+<ul>
+<% for x in @news["Data"] %>
+    <li><%= x["title"] %></li>
+<% end %>
+</ul>
+<% end %>
+
+<%# %= % = when displaying data %>
