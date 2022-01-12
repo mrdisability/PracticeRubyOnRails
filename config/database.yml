@@ -9,14 +9,33 @@
 #   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 #   timeout: 5000
 
+# default: &default
+#   adapter: sqlite3
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#   timeout: 5000
+
+# development:
+#   <<: *default
+#   database: db/development.sqlite3
+
 default: &default
-  adapter: sqlite3
+  adapter: mysql2
+  host: localhost
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
+  username: root
+  password: root
+  socket: /Applications/MAMP/tmp/mysql/mysql.sock
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: practice_ruby_on_rails
+
+#   Host	localhost
+# Port	8889
+# User	root
+# Password	root
+# Socket	/Applications/MAMP/tmp/mysql/mysql.sock
 
 # development:
 #   <<: *default
