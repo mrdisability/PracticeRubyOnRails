@@ -2,11 +2,6 @@ class TodosController < ApplicationController
     def index
         @todos = Todo.all 
         render json: @todos
-        # require 'mysql2'
-
-        # @client = Mysql2::Client.new(host: "localhost", username: "root", password: "root")
-        # @results = @client.query("SELECT * FROM todos'")
-        # render json: @results
     end 
 
     def show
