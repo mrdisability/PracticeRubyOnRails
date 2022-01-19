@@ -1,6 +1,10 @@
 # Practicing Ruby On Rails
 
-## React Redux frontend: https://github.com/thesamoanppprogrammer/PracticeReact
+## RailsHeroku: https://github.com/thesamoanppprogrammer/RailsHeroku
 
-## React Redux updated frontend: https://github.com/thesamoanppprogrammer/ReactReduxTodos
+## VueTodos (Frontend): https://github.com/thesamoanppprogrammer/VueTodos
+
+## React Redux (Frontend): https://github.com/thesamoanppprogrammer/PracticeReact
+
+## React Redux Updated (Frontend): https://github.com/thesamoanppprogrammer/ReactReduxTodos
 
